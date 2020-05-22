@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.luutry.cn/about/index.html</loc>
+    
+    <lastmod>2020-05-22T11:45:48.337Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.luutry.cn/categories/index.html</loc>
     
     <lastmod>2020-05-22T11:42:35.769Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>https://www.luutry.cn/2019/01/08/%E6%97%A5%E5%B8%B8%E5%90%90%E6%A7%BD/</loc>
     
     <lastmod>2019-01-08T13:41:01.431Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.luutry.cn/about/index.html</loc>
-    
-    <lastmod>2018-12-30T05:23:23.645Z</lastmod>
     
   </url>
   
