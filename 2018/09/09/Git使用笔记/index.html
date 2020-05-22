@@ -1,0 +1,90 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="Git使用笔记"><meta name="keywords" content="为学,git"><meta name="author" content="luutry"><meta name="copyright" content="luutry"><title>Git使用笔记 | luutry</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://v1.hitokoto.cn/?encode=js&amp;charset=utf-8&amp;select=.footer_custom_text" defer></script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="luutry" type="application/atom+xml">
+</head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#git简介"><span class="toc-number">1.</span> <span class="toc-text"> Git简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git命令"><span class="toc-number">2.</span> <span class="toc-text"> Git命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#常用的命令"><span class="toc-number">2.1.</span> <span class="toc-text"> 常用的命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git常见问题其实就是我遇到的问题"><span class="toc-number">2.2.</span> <span class="toc-text"> Git常见问题（其实就是我遇到的问题）</span></a></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://s1.ax1x.com/2020/05/22/YOxG1H.jpg"></div><div class="author-info__name text-center">luutry</div><div class="author-info__description text-center"></div><div class="follow-button"><a href="https://github.com/bytebeta" target="_blank" rel="noopener">Follow me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">13</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">12</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">2</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">Links</div><a class="author-info-links__name text-center" href="https://github.com/bytebeta" target="_blank" rel="noopener">Github</a><a class="author-info-links__name text-center" href="https://blog.csdn.net/yoyo18520" target="_blank" rel="noopener">CSDN</a><a class="author-info-links__name text-center" href="https://gitee.com/luutry" target="_blank" rel="noopener">Gitee</a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">luutry</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/about">about</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a></span></div><div id="post-info"><div id="post-title">Git使用笔记</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-09-09</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E8%B7%AF%E6%BC%AB%E6%BC%AB/">路漫漫</a><div class="post-meta-wordcount"><span>Word count: </span><span class="word-count">978</span><span class="post-meta__separator">|</span><span>Reading time: 3 min</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><blockquote>
+<p>Git是个好东西，慢慢了解后，到使用它，管理代码，很是方便。在开发的工程中，总是会遇到一堆问题，最头疼的就是恢复上一个版本，或者找到很久不更新的代码，一般找来找去都会找不到。呵呵，我就是这样的啦。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="git简介"><a class="markdownIt-Anchor" href="#git简介"></a> Git简介</h2>
+<p>Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。简单来说，就是用来管理代码的，因为很多人都在用，而且很多人都说好，那我也就来试试咯，结果还真的不错呢。</p>
+<h2 id="git命令"><a class="markdownIt-Anchor" href="#git命令"></a> Git命令</h2>
+<h3 id="常用的命令"><a class="markdownIt-Anchor" href="#常用的命令"></a> 常用的命令</h3>
+<p>我在使用过程中用到的git命令不多，呵呵，也就那么些，我用到了就记下来了。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 在当前目录新建一个Git代码库</span><br><span class="line">$ git init --bare</span><br><span class="line"></span><br><span class="line"># 下载一个项目和它的整个代码历史</span><br><span class="line"># 虚拟机地址格式, hello是服务器端登录用户名, 如url可以是这样的: hello@192.168.128.130:&#x2F;home&#x2F;WorkCode&#x2F;hello.git</span><br><span class="line">$ git clone [url] </span><br><span class="line"></span><br><span class="line"># 修改仓库所属用户为hello如上，下面操作就是把hello赋予操作hello.git库的权限</span><br><span class="line">$ cd &#x2F;home&#x2F;WorkCode&#x2F;</span><br><span class="line">$ chown -R hello hello.git  </span><br><span class="line"></span><br><span class="line"># 添加忽略文件</span><br><span class="line">$ touch .gitignore</span><br><span class="line"></span><br><span class="line"># 关联远程仓库</span><br><span class="line">$ git remote add origin hello@192.168.128.130:&#x2F;home&#x2F;WorkCode&#x2F;hello.git</span><br><span class="line"></span><br><span class="line"># 取消本地目录下关联的远程库</span><br><span class="line">$ git remote remove origin</span><br><span class="line"></span><br><span class="line"># 推送到远程仓库</span><br><span class="line">$ git push -u origin master</span><br><span class="line"></span><br><span class="line"># 显示commit历史，以及每次commit发生变更的文件</span><br><span class="line">$ git log --stat </span><br><span class="line"></span><br><span class="line"># 添加所有的文件到仓库中(后面有个.)</span><br><span class="line">$ git add .</span><br><span class="line"></span><br><span class="line"># 恢复删除的文件，用到checkout这个命令</span><br><span class="line">$ git checkout</span><br><span class="line"></span><br><span class="line"># 把文件提交到本地仓库</span><br><span class="line">$ git commit -m &quot;类似于获奖感言之类的&quot;​</span><br><span class="line"></span><br><span class="line"># 获取最近一次修改的文件</span><br><span class="line">$ git diff --name-only HEAD~ HEAD</span><br><span class="line"></span><br><span class="line"># 导出最新的版本库</span><br><span class="line">$ git archive -o ..&#x2F;hellolatest.zip HEAD</span><br><span class="line"></span><br><span class="line"># 导出指定提交记录，后面的那串数字id，是提交了就会知道的</span><br><span class="line">$ git archive -o ..&#x2F;git-1.4.0.tar 8996b47 </span><br><span class="line"></span><br><span class="line"># 导出一个目录，HEAD:+目录</span><br><span class="line">$ git archive -o ..&#x2F;git-1.4.0-docs.zip  HEAD:Documentation&#x2F;  </span><br><span class="line"></span><br><span class="line"># 导出为tar.gz格式</span><br><span class="line">git archive 8996b47 | gzip &gt; ..&#x2F;git-1.4.0.tar.gz</span><br></pre></td></tr></table></figure>
+<h3 id="git常见问题其实就是我遇到的问题"><a class="markdownIt-Anchor" href="#git常见问题其实就是我遇到的问题"></a> Git常见问题（其实就是我遇到的问题）</h3>
+<ul>
+<li>问题1：git push错误 remote: error: refusing to update checked out branch: refs/heads/master</li>
+</ul>
+<blockquote>
+<p>这是由于git默认拒绝了push操作，需要进行设置，修改.git/config文件后面添加如下代码：<br />
+[receive]<br />
+denyCurrentBranch = ignore<br />
+然后再push就可以了</p>
+</blockquote>
+<ul>
+<li>问题2：清空git库</li>
+</ul>
+<blockquote>
+<p>在仓库目录输入：rm -rf .git</p>
+</blockquote>
+<ul>
+<li>问题3：fatal: protocol error: bad line length character: No</li>
+</ul>
+<blockquote>
+<p>没有当前仓库的权限，主要是远程仓库的权限</p>
+</blockquote>
+<ul>
+<li>问题4：执行git remote add xxxx报错fatal: remote origin already exists.</li>
+</ul>
+<blockquote>
+<p>git remote rm origin删除远程仓库的origin，然后再add添加远程仓库</p>
+</blockquote>
+<ul>
+<li>问题5：执行git push origin master报错error: failed to push some refs to…</li>
+</ul>
+<blockquote>
+<p>由于github中的README.md文件不在本地代码目录中导致的， 先通过git pull --rebase origin master进行合并，再通过git push -u origin master上传</p>
+</blockquote>
+<ul>
+<li>问题6：执行git pull origin master报错fatal: refusing to merge unrelated histories</li>
+</ul>
+<blockquote>
+<p>要把两个不同的项目合并，需要添加一个强制命令：git pull origin master --allow-unrelated-histories</p>
+</blockquote>
+<ul>
+<li>问题7：git push -u origin master,报错fatal: Could not read from remote repository. Please make sure you have the correct access rights<br />
+and the repository exists.</li>
+</ul>
+<blockquote>
+<p>我在网上查了下，很多都是没有ssh key配置的问题，但是我用的本地的虚拟机，所以不存在这个问题。后来我仔细检查了一下，是我粗心，把远程地址关联错了，打错了一个字，就出现没有权限访问的问题。</p>
+</blockquote>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">luutry</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://www.luutry.cn/2018/09/09/Git%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/">https://www.luutry.cn/2018/09/09/Git%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%B8%BA%E5%AD%A6/">为学</a><a class="post-meta__tags" href="/tags/git/">git</a></div><div class="post-qr-code"><div class="post-qr-code-item"><img class="post-qr-code__img" src="https://s1.ax1x.com/2020/05/22/YXeqAg.jpg"><div class="post-qr-code__desc">支付宝赞赏</div></div><div class="post-qr-code-item"><img class="post-qr-code__img" src="https://s1.ax1x.com/2020/05/22/YXeHHS.jpg"><div class="post-qr-code__desc">微信赞赏</div></div></div><div class="social-share pull-right"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><nav id="pagination"><div class="prev-post pull-left"><a href="/2018/09/13/%E8%BF%9E%E6%83%B3%E6%83%B3%E9%83%BD%E8%BF%99%E4%B9%88%E9%9A%8F%E6%84%8F/"><i class="fa fa-chevron-left">  </i><span>连想想都这么随意</span></a></div><div class="next-post pull-right"><a href="/2018/09/06/%E6%9C%80%E8%BF%91%E4%B9%9F%E6%AF%94%E8%BE%83%E7%83%A6%E5%90%A7/"><span>最近也比较烦吧</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="vcomment"></div><script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'FH2ELUbvpM1Cel0mynAdglv8-gzGzoHsz',
+  appKey:'XRAdCBpAo43016p90ccY9MjN',
+  placeholder:'Just go go',
+  avatar:'mm',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang: 'zh-cn'
+})</script></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2018 - 2020 By luutry</div><div class="framework-info"><span>Driven - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="footer_custom_text">hitokoto</div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script src="/js/search/local-search.js"></script><script id="ribbon" src="/js/third-party/canvas-ribbon.js" size="150" alpha="0.6" zIndex="-1" data-click="false"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>

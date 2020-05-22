@@ -1,0 +1,97 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="gSoap笔记"><meta name="keywords" content="为学,C++,gSoap"><meta name="author" content="luutry"><meta name="copyright" content="luutry"><title>gSoap笔记 | luutry</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://v1.hitokoto.cn/?encode=js&amp;charset=utf-8&amp;select=.footer_custom_text" defer></script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="luutry" type="application/atom+xml">
+</head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#gsoap"><span class="toc-number">1.</span> <span class="toc-text"> gSoap</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#文档"><span class="toc-number">1.1.</span> <span class="toc-text"> 文档</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本用法"><span class="toc-number">1.2.</span> <span class="toc-text"> 基本用法：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用技巧"><span class="toc-number">1.3.</span> <span class="toc-text"> 使用技巧</span></a></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://s1.ax1x.com/2020/05/22/YOxG1H.jpg"></div><div class="author-info__name text-center">luutry</div><div class="author-info__description text-center"></div><div class="follow-button"><a href="https://github.com/bytebeta" target="_blank" rel="noopener">Follow me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">13</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">12</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">2</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">Links</div><a class="author-info-links__name text-center" href="https://github.com/bytebeta" target="_blank" rel="noopener">Github</a><a class="author-info-links__name text-center" href="https://blog.csdn.net/yoyo18520" target="_blank" rel="noopener">CSDN</a><a class="author-info-links__name text-center" href="https://gitee.com/luutry" target="_blank" rel="noopener">Gitee</a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">luutry</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/about">about</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a></span></div><div id="post-info"><div id="post-title">gSoap笔记</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-09-04</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E8%B7%AF%E6%BC%AB%E6%BC%AB/">路漫漫</a><div class="post-meta-wordcount"><span>Word count: </span><span class="word-count">836</span><span class="post-meta__separator">|</span><span>Reading time: 3 min</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><blockquote>
+<p>最开始调用webservice，开发用的是MSSOAPLib30方式的，很头疼，需要自己拼接一下，自己用着感觉真的不方便。后来搞了几次对接webservice接口，就换了gSoap这个工具，解析webservice的地址，一下子就可以导出C/C++方式的头文件和cpp，真是爽，调用起来也是毫无压力，(<sup>_</sup>) 。</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="gsoap"><a class="markdownIt-Anchor" href="#gsoap"></a> gSoap</h1>
+<h2 id="文档"><a class="markdownIt-Anchor" href="#文档"></a> 文档</h2>
+<ul>
+<li><a href="http://www.cs.fsu.edu/~engelen/soap.html" target="_blank" rel="noopener">官网文档1</a></li>
+<li><a href="https://www.genivia.com/doc/soapdoc2.html#tth_sEc1.1" target="_blank" rel="noopener">官网文档2</a></li>
+</ul>
+<h2 id="基本用法"><a class="markdownIt-Anchor" href="#基本用法"></a> 基本用法：</h2>
+<p>gSoap<a href="https://sourceforge.net/projects/gsoap2/files/" target="_blank" rel="noopener">下载</a>下来解压后,在<em>gsoap\bin\win32</em>目录下有<em>wsdl2h.exe</em>、<em>soapcpp2.exe</em>这个两个工具。<br />
+<strong>wsdl2h.exe</strong>是将webservice生成头文件的工具，<strong>soapcpp2.exe</strong>是将生成的头文件再生成我们需要调用的.h,cpp文件。<br />
+<strong>wsdl2h.exe</strong>使用例子，在cmd模式下，运行用法：</p>
+<blockquote>
+<p>wsdl2h -o 头文件名 WSDL文件名或URL<br />
+例：wsdl2h -s -o calc.h <a href="http://www.genivia.com/calc.wsdl" target="_blank" rel="noopener">http://www.genivia.com/calc.wsdl</a></p>
+</blockquote>
+<p><strong>wsdl2h.exe</strong>经常使用的指令</p>
+<blockquote>
+<p>-o 文件名，指定输出头文件<br />
+-n 名空间前缀 代替默认的ns<br />
+-c 产生纯C代码，否则是C++代码<br />
+-s 不要使用STL代码<br />
+-t 文件名，指定type map文件，默认为typemap.dat<br />
+-e 禁止为enum成员加上名空间前缀</p>
+</blockquote>
+<p><strong>soapcpp2.exe</strong>用法：</p>
+<blockquote>
+<p>soapcpp2 头文件<br />
+例：soapcpp2 -i -C -Iimport calc.h</p>
+</blockquote>
+<p><strong>soapcpp2.exe</strong>经常使用的指令</p>
+<blockquote>
+<p>-C 仅生成客户端代码<br />
+-S 仅生成服务器端代码<br />
+-L 不要产生soapClientLib.c和soapServerLib.c文件<br />
+-c 产生纯C代码，否则是C<ins>代码(与头文件有关)<br />
+-I 指定import路径（如果使用了STL就需要包含<em>gsoap\import</em>目录）<br />
+-x 不要产生XML示例文件<br />
+-i 生成C</ins>包装，客户端为xxxxProxy.h(.cpp)，服务器端为xxxxService.h(.cpp)。</p>
+</blockquote>
+<p>我用的是客户端，然后就直接把生成的文件几个文件拷到程序目录，调用就行了。一般就是五个</p>
+<blockquote>
+<p>calc.h、stdsoap2.h、stdsoap2.cpp、soapStub.h、soapH.h、soapC.cpp、soapClient.cpp<br />
+记得在VS编译器里面，把cpp的预编译去掉，不要包含StdAfx.h，就可以编译通过了。</p>
+</blockquote>
+<h2 id="使用技巧"><a class="markdownIt-Anchor" href="#使用技巧"></a> 使用技巧</h2>
+<ol>
+<li>调试模式</li>
+</ol>
+<blockquote>
+<p>gSoap是提供调试的模式的，可以用来查看发送过去的数据报文是什么，收到的报文数据是什么，还有gSoap整个模式运行的记录。一般都在程序目录下包含这个三个文件<em>SENT.log</em>、<em>RECV.log</em>、<em>TEST.log</em>。</p>
+</blockquote>
+<p>需要在<em>stdsoap2.h</em>头文件中取消<strong>DEBUG_STAMP</strong>或者<strong>DEBUG</strong>的注释，就可以了。也可以自定义输出的这个调试记录的路径，官方代码是这样写的，我还没有测试。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">soap</span> <span class="title">soap</span>;</span></span><br><span class="line">soap_init(&amp;soap);</span><br><span class="line">...</span><br><span class="line">soap_set_recv_logfile(&amp;soap, <span class="string">"logs/recv/service12.log"</span>); <span class="comment">// append all messages received in /logs/recv/service12.log</span></span><br><span class="line">soap_set_sent_logfile(&amp;soap, <span class="string">"logs/sent/service12.log"</span>); <span class="comment">// append all messages sent in /logs/sent/service12.log</span></span><br><span class="line">soap_set_test_logfile(&amp;soap, <span class="literal">NULL</span>); <span class="comment">// no file name: do not save debug messages</span></span><br><span class="line">...</span><br><span class="line">soap_serve(&amp;soap);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>XML解析</li>
+</ol>
+<blockquote>
+<p>gSoap提供解析XML的接口，我用了几次，感觉也挺方便的，该有的接口都有了。需要把<em>gsoap\dom.cpp</em>文件拷到你的程序目录下，包含引用一下就可以使用了。<strong>不过使用dom的时候需要在编译之前就引用import文件夹</strong>。</p>
+</blockquote>
+<p>例子代码：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">soap *ctx = soap_new1(SOAP_C_UTFSTRING | SOAP_XML_INDENT | SOAP_DOM_TREE);</span><br><span class="line"><span class="function">xsd__anyType <span class="title">dom</span><span class="params">(ctx, <span class="string">"menu"</span>)</span></span>;</span><br><span class="line">dom.att(<span class="string">"id"</span>) = <span class="number">7</span>;</span><br><span class="line">dom.att(<span class="string">"key"</span>) = <span class="string">L"⌘F"</span>;</span><br><span class="line">dom[<span class="string">"popup"</span>][<span class="string">"menuitem"</span>][<span class="number">1</span>].att(<span class="string">"value"</span>)   = <span class="string">"New"</span>;</span><br><span class="line">dom[<span class="string">"popup"</span>][<span class="string">"menuitem"</span>][<span class="number">1</span>].att(<span class="string">"onclick"</span>) = <span class="string">"CreateNewDoc()"</span>;</span><br><span class="line">dom[<span class="string">"popup"</span>][<span class="string">"menuitem"</span>][<span class="number">2</span>].att(<span class="string">"value"</span>)   = <span class="string">"Open"</span>;</span><br><span class="line">dom[<span class="string">"popup"</span>][<span class="string">"menuitem"</span>][<span class="number">2</span>].att(<span class="string">"onclick"</span>) = <span class="string">"OpenDoc()"</span>;</span><br><span class="line">dom[<span class="string">"popup"</span>][<span class="string">"menuitem"</span>][<span class="number">3</span>].att(<span class="string">"value"</span>)   = <span class="string">"Close"</span>;</span><br><span class="line">dom[<span class="string">"popup"</span>][<span class="string">"menuitem"</span>][<span class="number">3</span>].att(<span class="string">"onclick"</span>) = <span class="string">"CloseDoc()"</span>;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; dom;</span><br></pre></td></tr></table></figure>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">luutry</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://www.luutry.cn/2018/09/04/gSoap%E7%AC%94%E8%AE%B0/">https://www.luutry.cn/2018/09/04/gSoap%E7%AC%94%E8%AE%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%B8%BA%E5%AD%A6/">为学</a><a class="post-meta__tags" href="/tags/C/">C++</a><a class="post-meta__tags" href="/tags/gSoap/">gSoap</a></div><div class="post-qr-code"><div class="post-qr-code-item"><img class="post-qr-code__img" src="https://s1.ax1x.com/2020/05/22/YXeqAg.jpg"><div class="post-qr-code__desc">支付宝赞赏</div></div><div class="post-qr-code-item"><img class="post-qr-code__img" src="https://s1.ax1x.com/2020/05/22/YXeHHS.jpg"><div class="post-qr-code__desc">微信赞赏</div></div></div><div class="social-share pull-right"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><nav id="pagination"><div class="prev-post pull-left"><a href="/2018/09/06/%E6%9C%80%E8%BF%91%E4%B9%9F%E6%AF%94%E8%BE%83%E7%83%A6%E5%90%A7/"><i class="fa fa-chevron-left">  </i><span>最近也比较烦吧</span></a></div><div class="next-post pull-right"><a href="/2018/09/03/%E4%BD%BF%E7%94%A8STL%E7%AC%94%E8%AE%B0/"><span>使用STL笔记</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="vcomment"></div><script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'FH2ELUbvpM1Cel0mynAdglv8-gzGzoHsz',
+  appKey:'XRAdCBpAo43016p90ccY9MjN',
+  placeholder:'Just go go',
+  avatar:'mm',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang: 'zh-cn'
+})</script></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2018 - 2020 By luutry</div><div class="framework-info"><span>Driven - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="footer_custom_text">hitokoto</div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script src="/js/search/local-search.js"></script><script id="ribbon" src="/js/third-party/canvas-ribbon.js" size="150" alpha="0.6" zIndex="-1" data-click="false"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
