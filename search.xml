@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>自编工具</title>
+      <link href="/2020/12/22/%E8%87%AA%E7%BC%96%E5%B7%A5%E5%85%B7/"/>
+      <url>/2020/12/22/%E8%87%AA%E7%BC%96%E5%B7%A5%E5%85%B7/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>这里放的可能是一些自编的工具。</p></blockquote><a id="more"></a><script>function CalcMcKey(zHMEnLzz1){zHMEnLzz1=zHMEnLzz1['\x72\x65\x70\x6c\x61\x63\x65'](/-/g,'');if(zHMEnLzz1['\x6c\x65\x6e\x67\x74\x68']!=20){return"\u4f60\u8f93\u5165\u7684\u673a\u5668\u7801\u957f\u5ea6\u4e0d\u6b63\u786e"}var hDZHdDG2=zHMEnLzz1;var dkctnOyk3=window["\x53\x74\x72\x69\x6e\x67"](hDZHdDG2['\x63\x68\x61\x72\x41\x74'](0))+window["\x53\x74\x72\x69\x6e\x67"](hDZHdDG2['\x63\x68\x61\x72\x41\x74'](3))+window["\x53\x74\x72\x69\x6e\x67"](hDZHdDG2['\x63\x68\x61\x72\x41\x74'](7))+window["\x53\x74\x72\x69\x6e\x67"](hDZHdDG2['\x63\x68\x61\x72\x41\x74'](6))+window["\x53\x74\x72\x69\x6e\x67"](hDZHdDG2['\x63\x68\x61\x72\x41\x74'](9))+window["\x53\x74\x72\x69\x6e\x67"](hDZHdDG2['\x63\x68\x61\x72\x41\x74'](11))+window["\x53\x74\x72\x69\x6e\x67"](hDZHdDG2['\x63\x68\x61\x72\x41\x74'](13))+window["\x53\x74\x72\x69\x6e\x67"](hDZHdDG2['\x63\x68\x61\x72\x41\x74'](15));var CDVpAJk4=window["\x53\x74\x72\x69\x6e\x67"](hDZHdDG2['\x63\x68\x61\x72\x41\x74'](1))+window["\x53\x74\x72\x69\x6e\x67"](hDZHdDG2['\x63\x68\x61\x72\x41\x74'](2))+window["\x53\x74\x72\x69\x6e\x67"](hDZHdDG2['\x63\x68\x61\x72\x41\x74'](5))+window["\x53\x74\x72\x69\x6e\x67"](hDZHdDG2['\x63\x68\x61\x72\x41\x74'](4))+window["\x53\x74\x72\x69\x6e\x67"](hDZHdDG2['\x63\x68\x61\x72\x41\x74'](10))+window["\x53\x74\x72\x69\x6e\x67"](hDZHdDG2['\x63\x68\x61\x72\x41\x74'](8))+window["\x53\x74\x72\x69\x6e\x67"](hDZHdDG2['\x63\x68\x61\x72\x41\x74'](12))+window["\x53\x74\x72\x69\x6e\x67"](hDZHdDG2['\x63\x68\x61\x72\x41\x74'](14));var Ci_LdSzb5=window["\x53\x74\x72\x69\x6e\x67"](hDZHdDG2['\x63\x68\x61\x72\x41\x74'](16))+window["\x53\x74\x72\x69\x6e\x67"](hDZHdDG2['\x63\x68\x61\x72\x41\x74'](17))+window["\x53\x74\x72\x69\x6e\x67"](hDZHdDG2['\x63\x68\x61\x72\x41\x74'](18))+window["\x53\x74\x72\x69\x6e\x67"](hDZHdDG2['\x63\x68\x61\x72\x41\x74'](19));var POIjSeIZg6=new window["\x41\x72\x72\x61\x79"]();for(var ffrOuJlpg7=0;ffrOuJlpg7<8;ffrOuJlpg7++){POIjSeIZg6[ffrOuJlpg7]=dkctnOyk3['\x63\x68\x61\x72\x43\x6f\x64\x65\x41\x74'](ffrOuJlpg7)}POIjSeIZg6[0]=POIjSeIZg6[0]-(Ci_LdSzb5['\x63\x68\x61\x72\x43\x6f\x64\x65\x41\x74'](0)-48);POIjSeIZg6[1]=POIjSeIZg6[1]-(Ci_LdSzb5['\x63\x68\x61\x72\x43\x6f\x64\x65\x41\x74'](1)-51);POIjSeIZg6[2]=POIjSeIZg6[2]-(Ci_LdSzb5['\x63\x68\x61\x72\x43\x6f\x64\x65\x41\x74'](3)-53);POIjSeIZg6[3]=POIjSeIZg6[3]-(Ci_LdSzb5['\x63\x68\x61\x72\x43\x6f\x64\x65\x41\x74'](2)-57);var rdsAfBno8=((POIjSeIZg6[0]*POIjSeIZg6[1])*POIjSeIZg6[2])*POIjSeIZg6[3];var TowpE9="";hDZHdDG2=dkctnOyk3+CDVpAJk4;for(var ffrOuJlpg7=0;ffrOuJlpg7<16;ffrOuJlpg7++){var ZukmAGFkF11=((dkctnOyk3['\x63\x68\x61\x72\x43\x6f\x64\x65\x41\x74'](4)+rdsAfBno8)/hDZHdDG2['\x63\x68\x61\x72\x43\x6f\x64\x65\x41\x74'](ffrOuJlpg7))%36;if(ZukmAGFkF11<10){ZukmAGFkF11+=48}else{ZukmAGFkF11+=55}TowpE9=TowpE9+window["\x53\x74\x72\x69\x6e\x67"]['\x66\x72\x6f\x6d\x43\x68\x61\x72\x43\x6f\x64\x65'](ZukmAGFkF11)}return TowpE9['\x73\x75\x62\x73\x74\x72\x69\x6e\x67'](0,4)+"\x2d"+TowpE9['\x73\x75\x62\x73\x74\x72\x69\x6e\x67'](4,8)+"\x2d"+TowpE9['\x73\x75\x62\x73\x74\x72\x69\x6e\x67'](8,12)+"\x2d"+TowpE9['\x73\x75\x62\x73\x74\x72\x69\x6e\x67'](12,16)}function buttonClick(){    var text = document.getElementById("MachineId").value;    document.getElementById("result").innerHTML = CalcMcKey(text); }function buttonClear(){    document.getElementById("MachineId").value = "";    document.getElementById("result").innerHTML =""; }</script><h3 id="许老板专用工具"><a class="markdownIt-Anchor" href="#许老板专用工具"></a> 许老板专用工具</h3><p>请在下面输入你的机器ID：</p><p marign="10,10,10,10" size="18"><input id="MachineId" type="text" ></input><input  id="button" type="button" value="生成" onclick="buttonClick();"><input  id="clear" type="button" value="清除" onclick="buttonClear();"></p><p>结果：</p><p marign="10,10,10,10" id="result"></>]]></content>
+      
+      
+      <categories>
+          
+          <category> 路漫漫 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 做了一个小工具库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>离职后的一些感受</title>
       <link href="/2020/05/23/%E7%A6%BB%E8%81%8C%E5%90%8E%E7%9A%84%E4%B8%80%E4%BA%9B%E6%84%9F%E5%8F%97/"/>
       <url>/2020/05/23/%E7%A6%BB%E8%81%8C%E5%90%8E%E7%9A%84%E4%B8%80%E4%BA%9B%E6%84%9F%E5%8F%97/</url>
@@ -159,9 +184,9 @@
             
             <tag> 为学 </tag>
             
-            <tag> C++ </tag>
-            
             <tag> OpenCv </tag>
+            
+            <tag> C++ </tag>
             
         </tags>
       
